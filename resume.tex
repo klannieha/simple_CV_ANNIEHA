@@ -1,4 +1,3 @@
-% !TeX spellcheck = en_GB
 % !TeX program = pdflatex
 \documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
@@ -12,6 +11,11 @@
 \newcommand{\github}[1]{%
    \href{#1}{\faGithubSquare}%
 }
+
+\usepackage[
+backend=biber,style=ieee,sorting=ydnt,uniquename=init,defernumbers=true]{biblatex}
+\addbibresource{blib.bib}
+
 %====================
 % OFFICIAL PUBLIC OVERLEAF TEMPLATE
 % https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv
@@ -73,6 +77,10 @@
 \section{Education}
 \input{sections/education}
 
-\section{Activities}
+\input{printblibs}
+
+\section{Other Activities}
 \input{sections/activities}
+
 \end{document}
+
